@@ -31,9 +31,9 @@ public class Meme {
     private List<String> keywords;
 
     @Column(
-            name = "url"
+            name = "midia"
     )
-    private String url;
+    private String midia;
 
     public long getId() {
         return id;
@@ -59,11 +59,11 @@ public class Meme {
         this.keywords = keywords;
     }
 
-    public String getUrl() {
-        return url;
+    public String getMidia() {
+        return midia;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setMidia(String midia) {
+        this.midia = midia;
     }
 }

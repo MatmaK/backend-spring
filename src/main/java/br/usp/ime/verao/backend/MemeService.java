@@ -33,7 +33,7 @@ public class MemeService {
 
         Meme meme = find(id).get();
 
-        meme.setUrl(newMeme.getUrl());
+        meme.setMidia(newMeme.getMidia());
         meme.setKeywords(newMeme.getKeywords());
         meme.setName(newMeme.getName());
 

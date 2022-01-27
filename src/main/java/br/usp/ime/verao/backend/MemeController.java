@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api/memes")
@@ -18,6 +19,11 @@ public class MemeController {
     @GetMapping
     List<Meme> findAll() {
         return memeService.findAll();
+    }
+
+    @GetMapping("/{id}")
+    Optional<Meme> find(@PathVariable("id") Long id) {
+        return memeService.find(id);
     }
 
     @PostMapping
